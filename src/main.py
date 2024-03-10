@@ -1,19 +1,26 @@
 #!/usr/bin/python3
 
-from picamera2 import Picamera2
+from picamera2 import Picamera2, Preview
 import RPi.GPIO as GPIO
 import time
 
 
-class service_CAM:
-    def __init__(self):
-        pass
+
+class service_CAM(Picamera2):
+    def __init__(self, WIDTH, HEIGHT):
+        super().__init__()
+        self.WIDTH = WIDTH
+        self.HEIGHT = HEIGHT
 
     def start(self):
-        pass
+        super().start_preview(Preview.QTGL)
+        preview_config = super().create_preview_configuration({"size":(self.WIDTH, self.HEIGHT)})
+        super().configure(preview_config)
+        super().start()
 
     def stop(self):
-        pass
+        super().stop()
+
 
 
 class service_PWM:
@@ -38,7 +45,7 @@ class service_PWM:
 
 if __name__ == "__main__":
     # 清理GPIO设置
-    # GPIO.cleanup()
+    GPIO.cleanup()
     # 设置GPIO模式
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
@@ -50,19 +57,23 @@ if __name__ == "__main__":
     FREQUENCY_PWM = 50.0
     # 占空比（0.0到100.0）
     DUTY_CYCLE = 50
+    WIDTH = 640
+    HEIGHT = 480
 
 
-    my_service_PWM = service_PWM(PIN=PIN_PWM, FREQUENCY_PWM=FREQUENCY_PWM, DUTY_CYCLE=DUTY_CYCLE)
+    my_PWM = service_PWM(PIN=PIN_PWM, FREQUENCY_PWM=FREQUENCY_PWM, DUTY_CYCLE=DUTY_CYCLE)
+    my_CAM = service_CAM(WIDTH=WIDTH, HEIGHT=HEIGHT)
 
-    # 启动PWM，参数是占空比
-    my_service_PWM.start()  
+
+    # 启动my_PWM
+    my_PWM.start()
+    my_CAM.start()
+
 
     try:
-        while True:
-            pass
-
+        time.sleep(30)
     except KeyboardInterrupt:
         # 当按下 Ctrl+C 时
-        my_service_PWM.stop()
-
+        my_PWM.stop()
+        my_CAM.stop()
 
