@@ -11,7 +11,10 @@
 - [PWM原理 PWM频率与占空比详解](https://blog.csdn.net/as480133937/article/details/103439546)
 
 
+摄像头捕捉画面，创建窗口预览。
 
+参考：
+- https://github.com/raspberrypi/picamera2/blob/main/examples/preview.py
 
 
 
