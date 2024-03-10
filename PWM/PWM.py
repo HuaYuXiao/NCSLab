@@ -27,6 +27,7 @@ if __name__ == "__main__":
 
     try:
         while True:
+            GPIO.output(18, GPIO.LOW)
             pass
 
     except KeyboardInterrupt:
