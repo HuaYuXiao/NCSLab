@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/setting_arrow_title">
+        <EditTextPreference android:drawableTop="@drawable/button_forward_green" android:key="SettingForwardDown" android:title="@string/setting_arrow_forward_down"/>
+        <EditTextPreference android:drawableTop="@drawable/button_forward_blue" android:key="SettingForwardUp" android:title="@string/setting_arrow_forward_up" />
+        <EditTextPreference android:drawableTop="@drawable/button_backward_green" android:key="SettingBackwardDown" android:title="@string/setting_arrow_backward_down" />
+        <EditTextPreference android:drawableTop="@drawable/button_backward_blue" android:key="SettingBackwardUp" android:title="@string/setting_arrow_backward_up" />
+        <EditTextPreference android:drawableTop="@drawable/button_left_green" android:key="SettingTurnLeftDown" android:title="@string/setting_arrow_turnleft_down" />
+        <EditTextPreference android:drawableTop="@drawable/button_left_blue" android:key="SettingTurnLeftUp" android:title="@string/setting_arrow_turnleft_up" />
+        <EditTextPreference android:drawableTop="@drawable/button_right_green" android:key="SettingTurnRightDown" android:title="@string/setting_arrow_turnright_down" />
+        <EditTextPreference android:drawableTop="@drawable/button_right_blue" android:key="SettingTurnRightUp" android:title="@string/setting_arrow_turnright_up" />
+        <EditTextPreference android:drawableTop="@drawable/button_forward_green" android:key="SettingUpDown" android:title="@string/setting_arrow_up_down"/>
+        <EditTextPreference android:drawableTop="@drawable/button_forward_blue" android:key="SettingUpUp" android:title="@string/setting_arrow_up_up" />
+        <EditTextPreference android:drawableTop="@drawable/button_backward_green" android:key="SettingDownDown" android:title="@string/setting_arrow_down_down" />
+        <EditTextPreference android:drawableTop="@drawable/button_backward_blue" android:key="SettingDownUp" android:title="@string/setting_arrow_down_up" />
+        <EditTextPreference android:drawableTop="@drawable/button_left_green" android:key="SettingLeftDown" android:title="@string/setting_arrow_left_down" />
+        <EditTextPreference android:drawableTop="@drawable/button_left_blue" android:key="SettingLeftUp" android:title="@string/setting_arrow_left_up" />
+        <EditTextPreference android:drawableTop="@drawable/button_right_green" android:key="SettingRightDown" android:title="@string/setting_arrow_right_down" />
+        <EditTextPreference android:drawableTop="@drawable/button_right_blue" android:key="SettingRightUp" android:title="@string/setting_arrow_right_up" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

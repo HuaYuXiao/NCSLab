@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/ForwardBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/forward_button_selector"
+        android:layout_above="@+id/TurnLeftBtn"
+        android:layout_toEndOf="@+id/TurnLeftBtn" />
+
+    <Button
+        android:id="@+id/TurnRightBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/right_button_selector"
+        android:layout_above="@+id/BackwardBtn"
+        android:layout_toEndOf="@+id/BackwardBtn" />
+
+    <Button
+        android:id="@+id/TurnLeftBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/left_button_selector"
+        android:layout_above="@+id/BackwardBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/BackwardBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/backward_button_selector"
+        android:layout_toEndOf="@+id/TurnLeftBtn"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        />
+
+    <Button
+        android:id="@+id/UpBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/forward_button_selector"
+        android:layout_above="@+id/RightBtn"
+        android:layout_toStartOf="@+id/RightBtn"
+        />
+
+    <Button
+        android:id="@+id/DownBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/backward_button_selector"
+        android:layout_below="@+id/TurnRightBtn"
+        android:layout_toStartOf="@+id/RightBtn" />
+
+    <Button
+        android:id="@+id/RightBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/right_button_selector"
+        android:layout_above="@+id/DownBtn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:id="@+id/LeftBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/left_button_selector"
+        android:layout_toLeftOf="@+id/DownBtn"
+        android:layout_above="@+id/DownBtn"/>
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorText"
+        android:textSize="20dp"
+        android:text="Connect OK"/>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">AlphaBot</string>
+
+    <!--Menu相关-->
+    <string name="menu_scan">搜索</string>
+    <string name="menu_stop">停止</string>
+    <string name="menu_config">设置</string>
+    <string name="menu_clear">清空</string>
+    <string name="menu_reset">复位</string>
+
+    <!--ActionBar相关-->
+    <string name="actionBar_find_device">查找蓝牙设备</string>
+    <string name="actionBar_choose_mode">选择模式</string>
+    <string name="actionBar_telecontroller_mode">遥控模式</string>
+    <string name="actionBar_uart_mode">串口调试模式</string>
+    <string name="actionBar_config">设置</string>
+
+    <!--Toast相关-->
+    <string name="bluetooth_not_supported">无法打开蓝牙</string>
+    <string name="ble_connected_success">连接成功</string>
+    <string name="ble_connected_failed">连接失败</string>
+    <string name="input_send_content">请输入要发送的内容</string>
+    <string name="reset_success">复位成功</string>
+
+    <!--内容相关-->
+    <string name="unknown_device">未知设备</string>
+    <string name="send_data">发送:</string>
+    <string name="receive_data">接收:</string>
+    <string name="waveshare_data">waveshare</string>
+
+    <!--控键相关-->
+    <string name="state">状态</string>
+    <string name="telecontroller_mode">遥控模式</string>
+    <string name="uart_mode">串口模式</string>
+    <string name="send_button">发送</string>
+    <string name="deviceController_mode">外设控制</string>
+    <string name="BluetoothControl">蓝牙控制</string>
+    <string name="WifiControl">Wifi控制</string>
+
+    <!--设置相关-->
+    <string name="setting_speed_title">设置速度键按下时发送的命令</string>
+    <string name="setting_arrow_title">设置方向键按下和弹起时发送的命令</string>
+    <string name="setting_arrow_forward_down">前进（按下）</string>
+    <string name="setting_arrow_forward_up">前进（弹起）</string>
+    <string name="setting_arrow_backward_down">后退（按下）</string>
+    <string name="setting_arrow_backward_up">后退（弹起）</string>
+    <string name="setting_arrow_turnleft_down">左转（按下）</string>
+    <string name="setting_arrow_turnleft_up">左转（弹起）</string>
+    <string name="setting_arrow_turnright_down">右转（按下）</string>
+    <string name="setting_arrow_turnright_up">右转（弹起）</string>
+    <string name="setting_arrow_up_down">上（按下）</string>
+    <string name="setting_arrow_up_up">上（弹起）</string>
+    <string name="setting_arrow_down_down">下（按下）</string>
+    <string name="setting_arrow_down_up">下（弹起）</string>
+    <string name="setting_arrow_left_down">左（按下）</string>
+    <string name="setting_arrow_left_up">左（弹起）</string>
+    <string name="setting_arrow_right_down">右（按下）</string>
+    <string name="setting_arrow_right_up">右（弹起）</string>
+
+    <!--界面相关-->
+
+    <string name="videoip">IP 地址:</string>
+    <string name="ip">192.168.1.105</string>
+    <string name="ip_hint">请输入IP</string>
+
+    <string name="videoport">视频端口:</string>
+    <string name="port">8080</string>
+    <string name="videoport_hint">端口1000到65535</string>
+
+    <string name="ctrlport">控制端口:</string>
+    <string name="Socketport">8000</string>
+    <string name="Socketport_hint">和Socket服务器端口一致</string>
+
+    <string name="videoConnect">连接</string>
+    <string name="SockeConnect">连接</string>
+    <string name="buzzer">蜂鸣器</string>
+
+    <string name="wifi_hint">请打开wifi</string>
+    <string name="check_hint">请检查ip和port</string>
+    <string name="connectfail_hint">连接失败</string>
+    <string name="SocketSucceed_hint">Socket连接成功</string>
+    <string name="Socketfail_hint">Socket连接失败,请检查网络设置</string>
+    <string name="exit_hint">再按一次退出程序</string>
+</resources>

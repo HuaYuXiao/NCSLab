@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">AlphaBot</string>
+
+    <!--Menu相关-->
+    <string name="menu_scan">scan</string>
+    <string name="menu_stop">stop</string>
+    <string name="menu_config">config</string>
+    <string name="menu_clear">clear</string>
+    <string name="menu_reset">reset</string>
+
+    <!--ActionBar相关-->
+    <string name="actionBar_find_device">Search Bluetooth</string>
+    <string name="actionBar_choose_mode">Choose Mode</string>
+    <string name="actionBar_telecontroller_mode">Remote Control</string>
+    <string name="actionBar_uart_mode">UART Debug Mode</string>
+    <string name="actionBar_config">Config</string>
+
+
+    <!--Toast相关-->
+    <string name="bluetooth_not_supported">Invalid bluetooth device</string>
+    <string name="ble_connected_success">Connected</string>
+    <string name="ble_connected_failed">Connection failed</string>
+    <string name="input_send_content">Please enter the content to be sent</string>
+    <string name="reset_success">Reset success</string>
+
+
+    <!--内容相关-->
+    <string name="unknown_device">Unknown Device</string>
+    <string name="send_data">Send:</string>
+    <string name="receive_data">Received:</string>
+    <string name="waveshare_data">waveshare</string>
+
+    <!--控键相关-->
+    <string name="state">State</string>
+    <string name="telecontroller_mode">Romote Control</string>
+    <string name="uart_mode">UART</string>
+    <string name="send_button">Send</string>
+    <string name="deviceController_mode">Device Control</string>
+    <string name="BluetoothControl">Bluetooth Control</string>
+    <string name="WifiControl">Wifi Control</string>
+
+    <!--设置相关-->
+    <string name="setting_speed_title">Command for speed keys</string>
+    <string name="setting_arrow_title">Command for direction keys</string>
+    <string name="setting_arrow_forward_down">Forward (keydown)</string>
+    <string name="setting_arrow_forward_up">Forward (keyup)</string>
+    <string name="setting_arrow_backward_down">Backward (keydown)</string>
+    <string name="setting_arrow_backward_up">Backward (keyup)</string>
+    <string name="setting_arrow_turnleft_down">TurnLeft (keydown)</string>
+    <string name="setting_arrow_turnleft_up">TurnLeft (keyup)</string>
+    <string name="setting_arrow_turnright_down">TurnRight (keydown)</string>
+    <string name="setting_arrow_turnright_up">TurnRight (keyup)</string>
+    <string name="setting_arrow_up_down">Up (keydown)</string>
+    <string name="setting_arrow_up_up">Up (keyup)</string>
+    <string name="setting_arrow_down_down">Down (keydown)</string>
+    <string name="setting_arrow_down_up">Down (keyup)</string>
+    <string name="setting_arrow_left_down">Left (keydown)</string>
+    <string name="setting_arrow_left_up">Left (keyup)</string>
+    <string name="setting_arrow_right_down">Right (keydown)</string>
+    <string name="setting_arrow_right_up">Right (keyup)</string>
+
+    <!--界面相关-->
+
+    <string name="videoip">IP Address:</string>
+    <string name="ip">192.168.1.105</string>
+    <string name="ip_hint">Please enter IP address</string>
+
+    <string name="videoport">Video Port:</string>
+    <string name="port">8080</string>
+    <string name="videoport_hint">port 1000 to 65535</string>
+
+    <string name="ctrlport">SoketPort:</string>
+    <string name="Socketport">8000</string>
+    <string name="Socketport_hint">the socket server port</string>
+
+    <string name="videoConnect">Connet</string>
+    <string name="SockeConnect">Connet</string>
+    <string name="buzzer">Buzzer</string>
+
+    <string name="wifi_hint">please turn on wifi</string>
+    <string name="check_hint">please ip and port</string>
+    <string name="connectfail_hint">connect failed</string>
+    <string name="SocketSucceed_hint">Socket connect ok</string>
+    <string name="Socketfail_hint">Socket connection failed, please check the network settings</string>
+    <string name="exit_hint">Press again to exit the program</string>
+</resources>
