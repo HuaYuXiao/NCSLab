@@ -1,4 +1,4 @@
-# NCSLab
+# ![Alt Text](https://github.com/HuaYuXiao/NCSLab/blob/main/Img/logo.c5f1638c.png) NCSLab 
 
 ![Static Badge](https://img.shields.io/badge/Debian-12-A81D33?logo=debian)
 ![Static Badge](https://img.shields.io/badge/Python-3.11.5-3776AB?logo=python)
@@ -26,9 +26,19 @@
 - [Installing OpenCV on Raspberry Pi 4B](https://www.youtube.com/watch?v=OugQIz_vcFo)
 
 
+### 识别电压电流数据
+
+测试图片如下：
+
+![Alt Text](https://github.com/HuaYuXiao/NCSLab/blob/main/Camera/IMG_0774.jpeg)
+
+注意到，底色和内容颜色都是单一的，因此我们首先将两者分离开来。
+
+
+
 
 ## 分工（排名不分先后）
-- 华羽霄：电路控制程序
+- 华羽霄：可变电压源、主控程序、数字识别
 - 郝熙哲、汤竑敬：电路设计，PCB打板
 - 张艺峰、钟梓轩：系统接入网页
 
