@@ -32,9 +32,9 @@
 
 ![Alt Text](https://github.com/HuaYuXiao/NCSLab/blob/main/Camera/IMG_0774.jpeg)
 
-注意到，底色和内容颜色都是单一的，因此我们首先将两者分离开来。
+注意到，底色和内容颜色都是单一的，因此我们首先通过二值化将两者分离开来。
 
-
+![Alt Text](https://github.com/HuaYuXiao/NCSLab/blob/main/Camera/output.png)
 
 
 ## 分工（排名不分先后）
