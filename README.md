@@ -10,7 +10,7 @@
 
 输出电压与PWM波占空比关系如下：
 
-![Alt Text](https://github.com/HuaYuXiao/NCSLab/blob/main/PWM/output.png)
+![Alt Text](https://github.com/HuaYuXiao/NCSLab/blob/main/PWM/Vout2PWM.png)
 
 参考：
 - [PWM原理 PWM频率与占空比详解](https://blog.csdn.net/as480133937/article/details/103439546)
@@ -18,7 +18,7 @@
 输出电流稳定在20mA。
 
 
-### 摄像头捕捉画面，创建窗口预览
+### 摄像头捕捉画
 
 参考：
 - ⭐️ [How to Install & Setup OpenCV on Raspberry Pi 4](https://how2electronics.com/how-to-install-setup-opencv-on-raspberry-pi-4)
