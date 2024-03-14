@@ -6,15 +6,19 @@
 ![Static Badge](https://img.shields.io/badge/Raspberry_Pi-4B-A22846?logo=raspberrypi)
 
 
-## 树莓派输出PWM波，控制可变电源
+### PWM波控制可变电源
 
-**NOTICE**：PWM波在100%占空比时，依然无法达到5V，具体对应曲线以实际测得为准。
+输出电压与PWM波占空比关系如下：
+
+![Alt Text](https://github.com/HuaYuXiao/NCSLab/blob/main/PWM/output.png)
 
 参考：
 - [PWM原理 PWM频率与占空比详解](https://blog.csdn.net/as480133937/article/details/103439546)
 
+输出电流稳定在20mA。
 
-## 摄像头捕捉画面，创建窗口预览
+
+### 摄像头捕捉画面，创建窗口预览
 
 参考：
 - ⭐️ [How to Install & Setup OpenCV on Raspberry Pi 4](https://how2electronics.com/how-to-install-setup-opencv-on-raspberry-pi-4)
