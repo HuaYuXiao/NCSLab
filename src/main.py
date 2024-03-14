@@ -6,6 +6,25 @@ import time
 
 
 
+# GPIO18: PWM wave
+PIN_PWM = 18
+# 设置PWM频率（Hz）
+FREQUENCY_PWM = 50
+# 占空比（0.0到100.0）
+DUTY_CYCLE = 50
+WIDTH = 640
+HEIGHT = 480
+
+
+
+# 清理GPIO设置
+GPIO.cleanup()
+# 设置GPIO模式
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+
+
+
 class service_CAM(Picamera2):
     def __init__(self, WIDTH, HEIGHT):
         super().__init__()
@@ -37,6 +56,10 @@ class service_PWM:
     def start(self):
         self.action_pwm.start(self.DUTY_CYCLE)
 
+    def set(self, DUTY_CYCLE_new=DUTY_CYCLE, FREQUENCY_PWM_new=FREQUENCY_PWM):
+        self.action_pwm.ChangeDutyCycle(DUTY_CYCLE_new)
+        self.action_pwm.ChangeFrequency(FREQUENCY_PWM_new)
+
     def stop(self):
         self.action_pwm.stop()
         GPIO.output(self.PIN, GPIO.LOW)
@@ -44,36 +67,22 @@ class service_PWM:
 
 
 if __name__ == "__main__":
-    # 清理GPIO设置
-    GPIO.cleanup()
-    # 设置GPIO模式
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setwarnings(False)
-
-
-    # GPIO18: PWM wave
-    PIN_PWM = 18
-    # 设置PWM频率（Hz）
-    FREQUENCY_PWM = 50.0
-    # 占空比（0.0到100.0）
-    DUTY_CYCLE = 50
-    WIDTH = 640
-    HEIGHT = 480
-
-
     my_PWM = service_PWM(PIN=PIN_PWM, FREQUENCY_PWM=FREQUENCY_PWM, DUTY_CYCLE=DUTY_CYCLE)
-    my_CAM = service_CAM(WIDTH=WIDTH, HEIGHT=HEIGHT)
+    # my_CAM = service_CAM(WIDTH=WIDTH, HEIGHT=HEIGHT)
 
 
     # 启动my_PWM
     my_PWM.start()
-    my_CAM.start()
+    # my_CAM.start()
 
 
     try:
-        time.sleep(30)
+        time.sleep(10)
+        my_PWM.set(25)
+        time.sleep(10)
+
     except KeyboardInterrupt:
         # 当按下 Ctrl+C 时
         my_PWM.stop()
-        my_CAM.stop()
+        # my_CAM.stop()
 
