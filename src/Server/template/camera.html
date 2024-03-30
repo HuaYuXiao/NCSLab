@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Stream</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js" integrity="sha384-gX0S0+VdJK2JLs7klM1snGu53rwozggLDkW+2LFihexF9kbPV2L8j4RRA4EDCr2J" crossorigin="anonymous"></script>
+    <style>
+        #camera-stream {
+            width: 640px;
+            height: 480px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="camera-stream"></div>
+
+    <script>
+        // ??????? SocketIO
+        const socket = io();
+
+        // ????????????
+        socket.on('image', function(data) {
+            const image = 'data:image/jpeg;base64,' + btoa(String.fromCharCode.apply(null, new Uint8Array(data.image)));
+            document.getElementById('camera-stream').innerHTML = '<img src="' + image + '" width="640" height="480" />';
+        });
+    </script>
+</body>
+</html>
