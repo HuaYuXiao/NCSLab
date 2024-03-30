@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWM Control</title>
+</head>
+<body>
+    <h1>PWM Control</h1>
+    <form action="/update" method="post">
+        <label for="frequency">PWM Frequency:</label>
+        <input type="number" name="frequency" id="frequency" value="{{ frequency }}"><br>
+
+        <label for="duty_cycle">PWM Duty Cycle:</label>
+        <input type="number" name="duty_cycle" id="duty_cycle" value="{{ duty_cycle }}"><br>
+        
+        <input type="submit" value="Update PWM Settings">
+    </form>
+</body>
+</html>
