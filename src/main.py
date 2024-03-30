@@ -67,22 +67,22 @@ class service_PWM:
 
 
 if __name__ == "__main__":
-    my_PWM = service_PWM(PIN=PIN_PWM, FREQUENCY_PWM=FREQUENCY_PWM, DUTY_CYCLE=DUTY_CYCLE)
-    # my_CAM = service_CAM(WIDTH=WIDTH, HEIGHT=HEIGHT)
+    # my_PWM = service_PWM(PIN=PIN_PWM, FREQUENCY_PWM=FREQUENCY_PWM, DUTY_CYCLE=DUTY_CYCLE)
+    my_CAM = service_CAM(WIDTH=WIDTH, HEIGHT=HEIGHT)
 
 
     # 启动my_PWM
-    my_PWM.start()
-    # my_CAM.start()
+    # my_PWM.start()
+    my_CAM.start()
 
 
     try:
-        time.sleep(10)
-        my_PWM.set(25)
-        time.sleep(10)
+        time.sleep(60)
+        # my_PWM.set(25)
+        # time.sleep(10)
 
     except KeyboardInterrupt:
         # 当按下 Ctrl+C 时
-        my_PWM.stop()
-        # my_CAM.stop()
+        # my_PWM.stop()
+        my_CAM.stop()
 
