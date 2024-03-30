@@ -9,8 +9,19 @@
         $(document).ready(function(){
             $("#updateForm").submit(function(event){
                 event.preventDefault(); // ??????
-                var frequency = $("#frequency").val();
-                var duty_cycle = $("#duty_cycle").val();
+                var frequency = parseInt($("#frequency").val());
+                var duty_cycle = parseInt($("#duty_cycle").val());
+                
+                // ??frequency?duty_cycle??
+                if (isNaN(frequency) || frequency < 0 || frequency > 1000) {
+                    alert("Frequency must be a positive integer between 0 and 1000.");
+                    return;
+                }
+                if (isNaN(duty_cycle) || duty_cycle < 0 || duty_cycle > 100) {
+                    alert("Duty cycle must be an integer between 0 and 100.");
+                    return;
+                }
+                
                 $.post("/update", { frequency: frequency, duty_cycle: duty_cycle })
                     .done(function(data){
                         alert(data); // ??????
