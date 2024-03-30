@@ -50,7 +50,11 @@ def update():
     my_PWM.set(FREQUENCY_PWM_new=frequency, DUTY_CYCLE_new=duty_cycle)
     FREQUENCY_PWM = frequency
     DUTY_CYCLE = duty_cycle
-    return
+    return "PWM settings updated successfully!"
+
+def main():
+    app.run(host="0.0.0.0", debug=True, port=8080)
+
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True, port=8080)
+    main()

@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWM Control</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#updateForm").submit(function(event){
+                event.preventDefault(); // ??????
+                var frequency = $("#frequency").val();
+                var duty_cycle = $("#duty_cycle").val();
+                $.post("/update", { frequency: frequency, duty_cycle: duty_cycle })
+                    .done(function(data){
+                        alert(data); // ??????
+                    })
+                    .fail(function(){
+                        alert("Failed to update PWM settings"); // ??????
+                    });
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>PWM Control</h1>
-    <form action="/update" method="post">
+    <form id="updateForm">
         <label for="frequency">PWM Frequency:</label>
         <input type="number" name="frequency" id="frequency" value="{{ frequency }}"><br>
 
