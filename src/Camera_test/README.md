@@ -1,7 +1,7 @@
 server_camera.py 可以正常运行
 
-url: http://{ip}:8090/video_feed
+url: http://{树莓派ip}:8090/video_feed 
 
-e.p. http://192.168.173.114:8090/video_feed
+有自动对焦，颜色也已经正常了
 
 
