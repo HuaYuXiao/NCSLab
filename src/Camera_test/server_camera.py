@@ -26,16 +26,13 @@ def video_generator(picam):
             # 捕获图像并发送
             i = 0
             while True:
-                i=i+1
-                print(f'[debug]times:{i}')
-                # 捕获一帧图像
+                # i=i+1
+                # print(f'[debug]times:{i}')
+                # 捕获一帧图像，得到的是RGBA四通道数据
                 image_stream = picam.capture_array("main")
 
-                # 确保 image_stream 是一个 NumPy 数组
-                if isinstance(image_stream, list):
-                    image_array = image_stream[0]
-                else:
-                    image_array = image_stream
+                # 将透明度信息舍去，留下RGB数据
+                image_stream = image_stream[:,:,:3]
 
                 # 将 NumPy 数组转换为 PIL 图像
                 image_pil = Image.fromarray(image_stream, 'RGB')  # 假设 image_array 是 RGB 图像
