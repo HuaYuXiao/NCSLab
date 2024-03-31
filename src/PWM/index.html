@@ -13,7 +13,7 @@
                 var duty_cycle = parseInt($("#duty_cycle").val());
                 
                 // ??frequency?duty_cycle??
-                if (isNaN(frequency) || frequency < 0 || frequency > 1000) {
+                if (isNaN(frequency) || frequency < 50 || frequency > 1000) {
                     alert("Frequency must be a positive integer between 0 and 1000.");
                     return;
                 }
