@@ -1,6 +1,8 @@
 import numpy as np
 import cv2
 import socket
+
+
 class VideoStreamingTest(object):
     def __init__(self, host, port):
  
@@ -41,5 +43,7 @@ class VideoStreamingTest(object):
  
 if __name__ == '__main__':
     # host, port
-    h, p = "192.168.173.114", 8090
+    # h, p = "192.168.173.114", 8090
+    h, p = "10.14.15.105", 8090
     VideoStreamingTest(h, p)
+    

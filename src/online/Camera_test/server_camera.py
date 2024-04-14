@@ -5,10 +5,10 @@ import time
 from PIL import Image
 import io
 
+
 app = Flask(__name__)
 
 def video_generator(picam):
-
     with picam:
         picam.resolution = (640, 480)
         picam.framerate = 24  
@@ -61,4 +61,5 @@ def video_feed():
     return response
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8090, threaded=True)
+    app.run(host='0.0.0.0', port=8090, threaded=True, debug=True)
+    
