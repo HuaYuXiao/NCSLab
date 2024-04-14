@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 import time
 
 # GPIO18: PWM
-PIN_PWM = 18
+PIN_PWM = 17
 # PWM??(Hz)
 FREQUENCY_PWM = 50
 # ???(0.0?100.0)
