@@ -1,10 +1,10 @@
 # ![Alt Text](https://github.com/HuaYuXiao/NCSLab/blob/main/Img/logo.c5f1638c.png) NCSLab 
 
+![Static Badge](https://img.shields.io/badge/Python-3.11.2-3776AB?logo=python)
+![Static Badge](https://img.shields.io/badge/OpenCV-4.6.0-5C3EE8?logo=opencv)
+![Static Badge](https://img.shields.io/badge/Flask-2.2.2-000000?logo=flask)
 ![Static Badge](https://img.shields.io/badge/Debian-12-A81D33?logo=debian)
 ![Static Badge](https://img.shields.io/badge/Raspberry_Pi-4B-A22846?logo=raspberrypi)
-![Static Badge](https://img.shields.io/badge/Python-3.11.5-3776AB?logo=python)
-![Static Badge](https://img.shields.io/badge/OpenCV-4.6.0-5C3EE8?logo=opencv)
-
 
 
 ### PWM波控制可变电源
