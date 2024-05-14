@@ -1,7 +1,7 @@
 from utils import *
 
 
-app = Flask(__name__, template_folder=TEMPLATE_FOLDER)
+app = Flask(__name__, template_folder=FOLDER_TEMPLATE)
 socketio = SocketIO(app)
 # ??????????????
 stream = BytesIO()
@@ -14,6 +14,14 @@ def home():
 @app.route('/main')
 def main():
     return render_template('main.html')
+
+@app.route('/3d-model')
+def show_3d_model():
+    return send_from_directory('static', FOLDER_3D_MODEL)
+
+@app.route('/plant-information')
+def show_plant_information():
+    return send_from_directory('static', FOLDER_3D_MODEL)
 
 @app.route('/camera')
 def start_camera():

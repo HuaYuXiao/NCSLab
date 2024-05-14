@@ -1,0 +1,113 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltageDividerRule</title>
+    <style>
+        /* 添加CSS样式以使按钮并排显示并设置背景颜色 */
+        .button-container {
+            display: flex; /* 使用Flexbox布局 */
+            justify-content: left; /* 使按钮左对齐显示 */
+            flex-wrap: wrap; /* 允许内容换行 */
+            margin-bottom: 20px; /* 在按钮容器下方添加间隔 */
+        }
+        .button-container form {
+            margin: 0 10px; /* 在表单间添加间隔 */
+        }
+        /* 添加新的CSS类来设置按钮文字颜色 */
+        .green-text {
+            color: green; /* 设置文字颜色为绿色 */
+        }
+        .blue-text {
+            color: blue; /* 设置文字颜色为蓝色 */
+        }
+        .red-text {
+            color: red; /* 设置文字颜色为红色 */
+        }
+        #content-image {
+            width: 100%; /* 设置图片宽度 */
+            max-width: 600px; /* 设置图片最大宽度 */
+            margin-top: 20px; /* 在图片上方添加间隔 */
+        }
+    </style>
+    <script>
+        // 处理按钮点击事件的JavaScript函数
+        function loadContent(page) {
+            // 创建一个新的AJAX请求
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', page, true);
+
+            // 定义请求完成后的回调函数
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // 将请求的响应内容插入到页面的指定部分
+                    document.getElementById('content-image').src = xhr.responseText;
+                } else {
+                    // 处理错误情况
+                    alert('Error loading content');
+                }
+            };
+
+            // 发送请求
+            xhr.send();
+        }
+
+        // 为每个按钮添加事件监听器
+        document.addEventListener('DOMContentLoaded', function() {
+            var buttons = document.querySelectorAll('.button-container button');
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    loadContent(this.action); // 使用button的action属性作为请求的URL
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Home / Lab / VoltageDividerRule</h1>
+
+    <!-- 原有的按钮容器 -->
+    <div class="button-container">
+        <!-- 原有的三个按钮 -->
+        <form action="/main" method="get">
+            <button type="submit" class="text-green">Request Control</button>
+        </form>
+        <form action="/stop" method="get">
+            <button type="submit" class="text-blue">Give Up Control</button>
+        </form>
+        <form action="/repair" method="get">
+            <button type="submit" class="text-red">Quikly Repair</button>
+        </form>
+    </div>
+
+    <!-- 新的按钮容器 -->
+    <div class="button-container">
+        <!-- 新的五个按钮 -->
+        <form action="/3d-model" method="get">
+            <button type="submit">3-D Model</button>
+        </form>
+
+        <form action="/plant-information" method="get">
+            <button type="submit">Plant Information</button>
+        </form>
+
+        <form action="/control-algorithm" method="get">
+            <button type="submit">Control Algorithm</button>
+        </form>
+
+        <form action="/configuration" method="get">
+            <button type="submit">Configuration</button>
+        </form>
+
+        <form action="/algorithm-design" method="get">
+            <button type="submit">Algorithm Design</button>
+        </form>
+
+        <form action="/painting-area" method="get">
+            <button type="submit">Painting Area</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,4 +1,12 @@
-from flask import Flask, render_template, redirect, url_for, Response, stream_with_context
+from flask import (
+    Flask, 
+    render_template, 
+    redirect, 
+    url_for, 
+    Response, 
+    stream_with_context, 
+    send_from_directory
+)
 from flask_socketio import SocketIO, emit
 import subprocess
 import time
@@ -9,7 +17,8 @@ from PIL import Image
 import io
 
 
-TEMPLATE_FOLDER = '/home/hyx020222/NCSLab/src/online/template'
+FOLDER_TEMPLATE = '/home/hyx020222/NCSLab/template'
+FOLDER_3D_MODEL = '/home/hyx020222/NCSLab/Img/IMG_0746.jpeg'
 
 
 # ?????????????
@@ -78,4 +87,3 @@ def video_generator(picam):
             # 停止预览并释放相机资源
             picam.stop_preview()
             picam.close()
-
