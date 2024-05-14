@@ -17,7 +17,7 @@ from PIL import Image
 import io
 
 
-FOLDER_TEMPLATE = '/home/hyx020222/NCSLab/src/online/template'
+FOLDER_TEMPLATE = '/home/hyx020222/NCSLab/template'
 FOLDER_3D_MODEL = '/home/hyx020222/NCSLab/Img/IMG_0746.jpeg'
 
 
@@ -55,11 +55,15 @@ def video_generator(picam):
             picam.start()
             time.sleep(2)
             print('[debug] start')
+            # picam.capture_file("test.jpg")  # 拍摄照片并保存为 "test.jpg"
             # 创建一个缓冲区来保存JPEG图像
             image_stream = BytesIO()
 
             # 捕获图像并发送
+            i = 0
             while True:
+                # i=i+1
+                # print(f'[debug]times:{i}')
                 # 捕获一帧图像，得到的是RGBA四通道数据
                 image_stream = picam.capture_array("main")
 
