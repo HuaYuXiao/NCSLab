@@ -5,7 +5,9 @@ from flask import (
     url_for, 
     Response, 
     stream_with_context, 
-    send_from_directory
+    send_from_directory,
+    request, 
+    jsonify
 )
 from flask_socketio import SocketIO, emit
 import subprocess
@@ -15,10 +17,16 @@ import threading
 from picamera2 import Picamera2, Preview
 from PIL import Image
 import io
+import RPi.GPIO as GPIO
 
 
 FOLDER_TEMPLATE = '/home/hyx020222/NCSLab/template'
 FOLDER_3D_MODEL = '/home/hyx020222/NCSLab/Img/IMG_0746.jpeg'
+
+PIN_CHANNEL_1 = 18
+PIN_CHANNEL_2 = 23
+PIN_CHANNEL_3 = 24
+PIN_LIST = [PIN_CHANNEL_1, PIN_CHANNEL_2, PIN_CHANNEL_3]
 
 
 # ?????????????
@@ -42,7 +50,6 @@ def capture_image(stream, socketio):
         image = stream.getvalue()
         socketio.emit('image', {'image': image})
         time.sleep(0.1)  # ????????s
-
 
 def video_generator(picam):
     with picam:
