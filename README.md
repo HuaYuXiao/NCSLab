@@ -27,12 +27,14 @@
 输出电流稳定在20mA。
 
 
-### 摄像头捕捉画
+### Picamera2
 
-参考：
+Reference
+- ⭐️ https://github.com/barry-ran/raspberry-webcam
 - ⭐️ [How to Install & Setup OpenCV on Raspberry Pi 4](https://how2electronics.com/how-to-install-setup-opencv-on-raspberry-pi-4)
 - ⭐️ https://github.com/raspberrypi/picamera2/blob/main/examples/preview.py
 - [Installing OpenCV on Raspberry Pi 4B](https://www.youtube.com/watch?v=OugQIz_vcFo)
+
 
 
 ### 识别电压电流数据
@@ -51,3 +53,4 @@
 - 华羽霄：可变电压源、主控程序、数字识别
 - 郝熙哲、汤竑敬：电路设计，PCB打板
 - 张艺峰、钟梓轩：系统接入网页
+
