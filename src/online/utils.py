@@ -29,6 +29,14 @@ PIN_CHANNEL_3 = 24
 PIN_LIST = [PIN_CHANNEL_1, PIN_CHANNEL_2, PIN_CHANNEL_3]
 
 
+def set_GPIO(channel, value):
+    if value == '1':
+        GPIO.output(channel, GPIO.HIGH)
+    elif value == '0':
+        GPIO.output(channel, GPIO.LOW)
+    else:
+        print('Input for channel1 must be either 0 or 1.')
+
 # ?????????????
 def capture_image(stream, socketio):
     try:

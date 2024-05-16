@@ -30,23 +30,13 @@ def main():
 
         print(value1, value2, value3)
 
-        if value1:
-            GPIO.output(PIN_CHANNEL_1, GPIO.HIGH)
-        else:
-            GPIO.output(PIN_CHANNEL_1, GPIO.LOW)
-
-        if value2:
-            GPIO.output(PIN_CHANNEL_2, GPIO.HIGH)
-        else:
-            GPIO.output(PIN_CHANNEL_2, GPIO.LOW)
-
-        if value3:
-            GPIO.output(PIN_CHANNEL_3, GPIO.HIGH)
-        else:
-            GPIO.output(PIN_CHANNEL_3, GPIO.LOW)
+        set_GPIO(PIN_CHANNEL_1, value1)
+        set_GPIO(PIN_CHANNEL_2, value2)
+        set_GPIO(PIN_CHANNEL_3, value3)
 
         # Redirect back to the main page or to a different page if needed
         return redirect(url_for('main'))
+
     return render_template('main.html')
 
 @app.route('/stop')

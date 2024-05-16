@@ -5,11 +5,37 @@
     <title>Main Page</title>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Function to handle the form submission when Enter is pressed
             function handleEnter(event) {
                 var keyCode = event.which || event.keyCode;
-                if (keyCode === 13) { // Enter key code
+
+                var input1 = document.getElementById('input1').value;
+                // Validate input1 before allowing form submission
+                if (keyCode === 13 && (input1 === '0' || input1 === '1')) {
                     document.getElementById('inputForm').submit();
+                } else if (keyCode === 13 && input1 !== '') {
+                    // Optionally, you can alert the user or handle the invalid input case
+                    alert('Input for channel1 must be either 0 or 1.');
+                    event.preventDefault(); // Prevent form submission if the input is invalid
+                }
+
+                var input2 = document.getElementById('input2').value;
+                // Validate input2 before allowing form submission
+                if (keyCode === 13 && (input2 === '0' || input2 === '1')) {
+                    document.getElementById('inputForm').submit();
+                } else if (keyCode === 13 && input2 !== '') {
+                    // Optionally, you can alert the user or handle the invalid input case
+                    alert('Input for channel2 must be either 0 or 1.');
+                    event.preventDefault(); // Prevent form submission if the input is invalid
+                }
+
+                var input3 = document.getElementById('input3').value;
+                // Validate input3 before allowing form submission
+                if (keyCode === 13 && (input3 === '0' || input3 === '1')) {
+                    document.getElementById('inputForm').submit();
+                } else if (keyCode === 13 && input3 !== '') {
+                    // Optionally, you can alert the user or handle the invalid input case
+                    alert('Input for channel3 must be either 0 or 1.');
+                    event.preventDefault(); // Prevent form submission if the input is invalid
                 }
             }
 
@@ -22,13 +48,13 @@
 </head>
 <body>
     <form id="inputForm" method="POST" action="{{ url_for('main') }}">
-        <label for="input1">Input 1:</label>
+        <label for="input1">channel1:</label>
         <input type="text" id="input1" name="input1"><br>
 
-        <label for="input2">Input 2:</label>
+        <label for="input2">channel2:</label>
         <input type="text" id="input2" name="input2"><br>
 
-        <label for="input3">Input 3:</label>
+        <label for="input3">channel3:</label>
         <input type="text" id="input3" name="input3"><br>
     </form>
 </body>
