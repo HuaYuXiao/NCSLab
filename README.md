@@ -19,7 +19,7 @@
 
 输出电压与PWM波占空比关系如下：
 
-![Alt Text](PWM/Vout2PWM.png)
+![Alt Text](src/offline/PWM/Vout2PWM.png)
 
 参考：
 - [PWM原理 PWM频率与占空比详解](https://blog.csdn.net/as480133937/article/details/103439546)
