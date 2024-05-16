@@ -6,37 +6,38 @@ socketio = SocketIO(app)
 # ??????????????
 stream = BytesIO()
 
+GPIO.setwarnings(False)
+# 清理GPIO设置
+GPIO.cleanup()
+# 设置GPIO模式
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(PIN_LIST, GPIO.OUT)
+for pin in PIN_LIST:
+    GPIO.output(pin, GPIO.LOW)
+
 
 @app.route('/')
 def home():
     return render_template('home.html')
 
-@app.route('/main')
+@app.route('/main', methods=['GET', 'POST'])
 def main():
+    if request.method == 'POST':
+        # Get the values from the input boxes
+        value1 = request.form.get('input1')
+        value2 = request.form.get('input2')
+        value3 = request.form.get('input3')
+
+        print(value1, value2, value3)
+
+        set_GPIO(PIN_CHANNEL_1, value1)
+        set_GPIO(PIN_CHANNEL_2, value2)
+        set_GPIO(PIN_CHANNEL_3, value3)
+
+        # Redirect back to the main page or to a different page if needed
+        return redirect(url_for('main'))
+
     return render_template('main.html')
-
-@app.route('/3d-model')
-def show_3d_model():
-    return send_from_directory('static', FOLDER_3D_MODEL)
-
-@app.route('/plant-information')
-def show_plant_information():
-    return send_from_directory('static', FOLDER_3D_MODEL)
-
-@app.route('/camera')
-def start_camera():
-    # ????????
-    camera_thread = threading.Thread(target=capture_image)
-    camera_thread.start()
-    return render_template('camera.html')
-
-@app.route('/video_feed')
-def video_feed():
-    picam = Picamera2()
-    response = Response(stream_with_context(video_generator(picam)), mimetype='multipart/x-mixed-replace; boundary=frame')
-    # 设置响应头，告诉浏览器连接可以保持开启状态
-    response.headers['Connection'] = 'keep-alive'
-    return response
 
 @app.route('/stop')
 def stop():
@@ -44,4 +45,5 @@ def stop():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8090, threaded=True, debug=True)
+        # Use the SocketIO run method to handle both the web server and SocketIO events
+    app.run(host='0.0.0.0', port=8090, debug=True)

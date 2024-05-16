@@ -2,58 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#updateForm").submit(function(event){
-                event.preventDefault(); // ??????
-                var frequency = parseInt($("#frequency").val());
-                var duty_cycle = parseInt($("#duty_cycle").val());
-                
-                // ??frequency?duty_cycle??
-                if (isNaN(frequency) || frequency < 50 || frequency > 1000) {
-                    alert("Frequency must be a positive integer between 0 and 1000.");
-                    return;
+    <title>Main Page</title>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', (event) => {
+            function handleEnter(event) {
+                var keyCode = event.which || event.keyCode;
+
+                var input1 = document.getElementById('input1').value;
+                // Validate input1 before allowing form submission
+                if (keyCode === 13 && (input1 === '0' || input1 === '1')) {
+                    document.getElementById('inputForm').submit();
+                } else if (keyCode === 13 && input1 !== '') {
+                    // Optionally, you can alert the user or handle the invalid input case
+                    alert('Input for channel1 must be either 0 or 1.');
+                    event.preventDefault(); // Prevent form submission if the input is invalid
                 }
-                if (isNaN(duty_cycle) || duty_cycle < 0 || duty_cycle > 100) {
-                    alert("Duty cycle must be an integer between 0 and 100.");
-                    return;
+
+                var input2 = document.getElementById('input2').value;
+                // Validate input2 before allowing form submission
+                if (keyCode === 13 && (input2 === '0' || input2 === '1')) {
+                    document.getElementById('inputForm').submit();
+                } else if (keyCode === 13 && input2 !== '') {
+                    // Optionally, you can alert the user or handle the invalid input case
+                    alert('Input for channel2 must be either 0 or 1.');
+                    event.preventDefault(); // Prevent form submission if the input is invalid
                 }
-                
-                $.post("/update", { frequency: frequency, duty_cycle: duty_cycle })
-                    .done(function(data){
-                        alert(data); // ??????
-                    })
-                    .fail(function(){
-                        alert("Failed to update PWM settings"); // ??????
-                    });
-            });
+
+                var input3 = document.getElementById('input3').value;
+                // Validate input3 before allowing form submission
+                if (keyCode === 13 && (input3 === '0' || input3 === '1')) {
+                    document.getElementById('inputForm').submit();
+                } else if (keyCode === 13 && input3 !== '') {
+                    // Optionally, you can alert the user or handle the invalid input case
+                    alert('Input for channel3 must be either 0 or 1.');
+                    event.preventDefault(); // Prevent form submission if the input is invalid
+                }
+            }
+
+            // Add event listener to the input boxes for the Enter key
+            document.getElementById('input1').addEventListener('keypress', handleEnter);
+            document.getElementById('input2').addEventListener('keypress', handleEnter);
+            document.getElementById('input3').addEventListener('keypress', handleEnter);
         });
     </script>
 </head>
-
 <body>
-    <h1>main</h1>
+    <form id="inputForm" method="POST" action="{{ url_for('main') }}">
+        <label for="input1">channel1:</label>
+        <input type="text" id="input1" name="input1"><br>
 
-    <form id="updateForm">
-        <label for="frequency">PWM Frequency:</label>
-        <input type="number" name="frequency" id="frequency" value="{{ frequency }}"><br>
+        <label for="input2">channel2:</label>
+        <input type="text" id="input2" name="input2"><br>
 
-        <label for="duty_cycle">PWM Duty Cycle:</label>
-        <input type="number" name="duty_cycle" id="duty_cycle" value="{{ duty_cycle }}"><br>
-        
-        <input type="submit" value="Update PWM">
-    </form>
-
-    <!-- 添加一个iframe来显示视频流 -->
-    <iframe src="{{ url_for('video_feed') }}" width="640" height="480" frameborder="0">
-        Your browser does not support iframes.
-    </iframe>
-
-    <form action="/stop" method="get">
-        <button type="submit">stop</button>
+        <label for="input3">channel3:</label>
+        <input type="text" id="input3" name="input3"><br>
     </form>
 </body>
 </html>
