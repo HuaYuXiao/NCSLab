@@ -10,10 +10,20 @@
 
 ## Release Note
 
+- v2.1.2:
+  - `rectangle-module` and `submit`
+- v2.1.1:
+  - support video streaming
 - v2.1.0: 
   - support continuous channel switch
   - support check for invalid input
 
+
+## Launch
+
+```bash
+python3 src/online/main.py
+```
 
 ### PWM波控制可变电源
 
@@ -27,14 +37,17 @@
 输出电流稳定在20mA。
 
 
-### Picamera2
+## Picamera2
+
+update:2024.5.17
+先运行/src/online/Camera_test/server_camera.py 在localhost:8091/video_feed下开启视频流
+然后/src/online/main.py 运行主网页
 
 Reference
 - ⭐️ https://github.com/barry-ran/raspberry-webcam
 - ⭐️ [How to Install & Setup OpenCV on Raspberry Pi 4](https://how2electronics.com/how-to-install-setup-opencv-on-raspberry-pi-4)
 - ⭐️ https://github.com/raspberrypi/picamera2/blob/main/examples/preview.py
 - [Installing OpenCV on Raspberry Pi 4B](https://www.youtube.com/watch?v=OugQIz_vcFo)
-
 
 
 ### 识别电压电流数据
@@ -48,13 +61,9 @@ Reference
 ![Alt Text](Camera/output.png)
 
 
-## 分工
+## COntribution
 
-- 华羽霄：可变电压源、主控程序、数字识别
+- 华羽霄：可变电压源、网页设计
 - 郝熙哲、汤竑敬：电路设计，PCB打板
-- 张艺峰、钟梓轩：系统接入网页
-
-
-## update:2024.5.17
-先运行/src/online/Camera_test/server_camera.py 在localhost:8091/video_feed下开启视频流
-然后/src/online/main.py 运行主网页
+- 钟梓轩：视频推流
+- 张艺峰：文档撰写

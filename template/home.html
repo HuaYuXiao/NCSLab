@@ -32,6 +32,42 @@
                 margin-top: 20px; /* 在图片上方添加间隔 */
             }
         </style>
+
+        <script>
+            function changeContent(contentName) {
+                // You would fetch the new content here based on contentName
+                // For demonstration, we'll just set some static text
+                var newContent = '';
+                switch (contentName) {
+                    case '3D Model':
+                        newContent = '<p>This is the 3D Model content.</p>';
+                        break;
+                    case 'Plant Information':
+                        newContent = '<p>This is the Plant Information content.</p>';
+                        break;
+                    case 'Control Algorithm':
+                        newContent = '<p>This is the Control Algorithm content.</p>';
+                        break;
+                    case 'Configuration':
+                        newContent = '<p>This is the Configuration content.</p>';
+                        break;
+                    case 'Algorithm Design':
+                        newContent = '<p>This is the Algorithm Design content.</p>';
+                        break;
+                    case 'Painting Area':
+                        newContent = '<p>This is the Painting Area content.</p>';
+                        break;
+                    default:
+                        newContent = '<p>default</p>';
+                }
+                document.getElementById('content').innerHTML = newContent;
+            }
+
+            // Set the default content to '3D Model' when the page loads
+            window.onload = function() {
+                changeContent('3D Model');
+            };
+        </script>
     </head>
     <body>
         <h1>Home / Lab / VoltageDividerRule</h1>
@@ -45,36 +81,22 @@
                 <button type="submit" class="text-blue">Give Up Control</button>
             </form>
             <form action="/repair" method="get">
-                <button type="submit" class="text-red">Quikly Repair</button>
+                <button type="submit" class="text-red">Quickly Repair</button>
             </form>
         </div>
-    
-        <!-- 新的按钮容器 -->
+
         <div class="button-container">
-            <!-- 新的五个按钮 -->
-            <form action="/3d-model" method="get">
-                <button type="submit">3-D Model</button>
-            </form>
-    
-            <form action="/plant-information" method="get">
-                <button type="submit">Plant Information</button>
-            </form>
-    
-            <form action="/control-algorithm" method="get">
-                <button type="submit">Control Algorithm</button>
-            </form>
-    
-            <form action="/configuration" method="get">
-                <button type="submit">Configuration</button>
-            </form>
-    
-            <form action="/algorithm-design" method="get">
-                <button type="submit">Algorithm Design</button>
-            </form>
-    
-            <form action="/painting-area" method="get">
-                <button type="submit">Painting Area</button>
-            </form>
+            <!-- Buttons -->
+            <button onclick="changeContent('3D Model')">3-D Model</button>
+            <button onclick="changeContent('Plant Information')">Plant Information</button>
+            <button onclick="changeContent('Control Algorithm')">Control Algorithm</button>
+            <button onclick="changeContent('Configuration')">Configuration</button>
+            <button onclick="changeContent('Algorithm Design')">Algorithm Design</button>
+            <button onclick="changeContent('Painting Area')">Painting Area</button>
+        </div>
+
+        <div id="content">
+            <!-- Initial content -->
         </div>
     </body>
     </html>
