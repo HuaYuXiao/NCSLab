@@ -1,8 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Main Page</title>
+    <title>NCSLab</title>
+
+    <style>
+        .rectangle-module {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .input-group label {
+            margin-right: 10px;
+        }
+        .submit-button {
+            margin-left: auto;
+        }
+    </style>
+
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', (event) => {
             function handleEnter(event) {
@@ -45,17 +70,36 @@
             document.getElementById('input3').addEventListener('keypress', handleEnter);
         });
     </script>
+    <!-- Linking the JavaScript file -->
+<!--    <script src="script/main.js" type="text/javascript"></script>-->
+    <noscript>Sorry, your browser does not support JavaScript</noscript>
 </head>
+
 <body>
     <form id="inputForm" method="POST" action="{{ url_for('main') }}">
-        <label for="input1">channel1:</label>
-        <input type="text" id="input1" name="input1"><br>
-
-        <label for="input2">channel2:</label>
-        <input type="text" id="input2" name="input2"><br>
-
-        <label for="input3">channel3:</label>
-        <input type="text" id="input3" name="input3"><br>
+        <div class="rectangle-module">
+            <div class="input-group">
+                <label for="input1">channel1</label>
+                <input type="text" id="input1" name="input1">
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </div>
+        <div class="rectangle-module">
+            <div class="input-group">
+                <label for="input2">channel2</label>
+                <input type="number" id="input2" name="input2">
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </div>
+        <div class="rectangle-module">
+            <div class="input-group">
+                <label for="input3">channel3</label>
+                <input type="number" id="input3" name="input3">
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </div>
     </form>
+
+    <img style="display: block" src="http://10.14.15.105:8091/video_feed">
 </body>
 </html>
