@@ -1,7 +1,7 @@
 from utils import *
 
 
-app = Flask(__name__, template_folder=FOLDER_TEMPLATE)
+app = Flask(__name__)
 socketio = SocketIO(app)
 # ??????????????
 stream = BytesIO()
@@ -30,9 +30,9 @@ def main():
 
         print(value1, value2, value3)
 
-        set_GPIO(PIN_CHANNEL_1, value1)
-        set_GPIO(PIN_CHANNEL_2, value2)
-        set_GPIO(PIN_CHANNEL_3, value3)
+        # set_GPIO(PIN_CHANNEL_1, value1)
+        # set_GPIO(PIN_CHANNEL_2, value2)
+        # set_GPIO(PIN_CHANNEL_3, value3)
 
         # Redirect back to the main page or to a different page if needed
         return redirect(url_for('main'))
