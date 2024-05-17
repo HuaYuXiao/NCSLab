@@ -54,3 +54,7 @@ Reference
 - 郝熙哲、汤竑敬：电路设计，PCB打板
 - 张艺峰、钟梓轩：系统接入网页
 
+
+## update:2024.5.17
+先运行/src/online/Camera_test/server_camera.py 在localhost:8091/video_feed下开启视频流
+然后/src/online/main.py 运行主网页
