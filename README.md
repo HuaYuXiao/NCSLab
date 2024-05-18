@@ -13,6 +13,16 @@
 ![Static Badge](https://img.shields.io/badge/Debian-12-A81D33?logo=debian)
 
 
+## Patent
+
+- [一种基于HTML5的电路虚拟实验系统](reference/patent/一种基于HTML5的电路虚拟实验系统.pdf)：[simu] 用户通过平面和3D绘制模型模块，可以根据需要手动绘制平面电路模型
+- [一种基于数字孪生技术的电路实验教学系](reference/patent/一种基于数字孪生技术的电路实验教学系.pdf)：[simu + real] 通过对仿真电路的修改反馈到可编程逻辑控制器开关，从而改变实物电路连接
+- [一种基于网络化控制的风扇速度控制在线](reference/patent/一种基于网络化控制的风扇速度控制在线.pdf)：[simu + real] 
+- [一种虚拟电路实验室及其制作方法、使用方法](reference/patent/一种虚拟电路实验室及其制作方法、使用方法.pdf)：[simu] 使用FPGA和Arduino结合实现暂态仿真实验的简便运行
+- [一种远程控制的电子电路实验系统](reference/patent/一种远程控制的电子电路实验系统.pdf)：
+- [远程在线共享网络实验室的虚-实组合互动实现方法](reference/patent/远程在线共享网络实验室的虚-实组合互动实现方法.pdf)：[simu + real] 基于真实组网环境的虚拟组网实验平台
+
+
 ## Release Note
 
 - v2.1.3: 
@@ -57,7 +67,7 @@ Reference
 - [Installing OpenCV on Raspberry Pi 4B](https://www.youtube.com/watch?v=OugQIz_vcFo)
 
 
-### 识别电压电流数据
+## 识别电压电流数据
 
 测试图片如下：
 
@@ -68,9 +78,9 @@ Reference
 ![Alt Text](Camera/output.png)
 
 
-## COntribution
+## Contributor
 
-- 华羽霄：可变电压源、网页设计
-- 郝熙哲、汤竑敬：电路设计，PCB打板
-- 钟梓轩：视频推流
-- 张艺峰：文档撰写
+- 电路设计：郝熙哲、汤竑敬
+- 网页设计：华羽霄、钟梓轩
+- 专利撰写：华羽霄、郝熙哲、张艺峰
+- 专利申请：郝熙哲、华羽霄、张艺峰
