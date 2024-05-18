@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         var keyCode = event.which || event.keyCode;
 
         var input1 = document.getElementById('input1').value;
-        if (keyCode === 13 && (input1 === '0' || input1 === '1')) {
+        if (keyCode === 13 && (input1 === 0 || input1 === 1)) {
             document.getElementById('inputForm').submit();
         } else if (keyCode === 13 && input1 !== '') {
             alert('Input for channel1 must be either 0 or 1.');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
 
         var input2 = document.getElementById('input2').value;
-        if (keyCode === 13 && (input2 === '0' || input2 === '1')) {
+        if (keyCode === 13 && (input2 === 0 || input2 === 1)) {
             document.getElementById('inputForm').submit();
         } else if (keyCode === 13 && input2 !== '') {
             alert('Input for channel2 must be either 0 or 1.');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
 
         var input3 = document.getElementById('input3').value;
-        if (keyCode === 13 && (input3 === '0' || input3 === '1')) {
+        if (keyCode === 13 && (input3 === 0 || input3 === 1)) {
             document.getElementById('inputForm').submit();
         } else if (keyCode === 13 && input3 !== '') {
             alert('Input for channel3 must be either 0 or 1.');
