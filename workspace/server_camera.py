@@ -8,26 +8,23 @@ import io
 
 app = Flask(__name__)
 
-def video_generator(picam):
-    with picam:
+def video_generator():
+    # with picam:
+        picam = Picamera2()
+
         picam.resolution = (640, 480)
-        picam.framerate = 24  
+        picam.framerate = 24
+
         try:
             # 开始预览
             picam.start_preview(Preview.NULL)
 
             picam.start()
-            time.sleep(2)
-            print('[debug] start')
-            # picam.capture_file("test.jpg")  # 拍摄照片并保存为 "test.jpg"
             # 创建一个缓冲区来保存JPEG图像
             image_stream = BytesIO()
 
             # 捕获图像并发送
-            i = 0
             while True:
-                # i=i+1
-                # print(f'[debug]times:{i}')
                 # 捕获一帧图像，得到的是RGBA四通道数据
                 image_stream = picam.capture_array("main")
 
@@ -43,7 +40,8 @@ def video_generator(picam):
                 byte_io.seek(0)  # 移动到 BytesIO 对象的开头
                 # 将图像发送给客户端
                 yield (b'--frame\r\n'
-                    b'Content-Type: image/jpeg\r\n\r\n' + byte_io.read() + b'\r\n\r\n')
+                    b'Content-Type: image/jpeg\r\n\r\n' + 
+                    byte_io.read() + b'\r\n\r\n')
                 byte_io.seek(0)
                 byte_io.truncate()
 
@@ -52,10 +50,10 @@ def video_generator(picam):
             picam.stop_preview()
             picam.close()
 
-@app.route('/video_feed')
+@app.route('/')
 def video_feed():
-    picam = Picamera2()
-    response = Response(stream_with_context(video_generator(picam)), mimetype='multipart/x-mixed-replace; boundary=frame')
+    response = Response(stream_with_context(video_generator()), 
+                        mimetype='multipart/x-mixed-replace; boundary=frame')
     # 设置响应头，告诉浏览器连接可以保持开启状态
     response.headers['Connection'] = 'keep-alive'
     return response
