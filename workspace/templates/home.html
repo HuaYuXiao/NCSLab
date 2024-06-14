@@ -1,70 +1,70 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>VoltageDividerRule</title>
-        <!-- Add any additional meta tags, CSS links, or scripts here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VoltageDividerRule</title>
+    <!-- Add any additional meta tags, CSS links, or scripts here -->
 
-        <style>
-            /* 添加CSS样式以使按钮并排显示并设置背景颜色 */
-            .button-container {
-                display: flex; /* 使用Flexbox布局 */
-                justify-content: left; /* 使按钮左对齐显示 */
-                flex-wrap: wrap; /* 允许内容换行 */
-                margin-bottom: 20px; /* 在按钮容器下方添加间隔 */
-            }
-            .button-container form {
-                margin: 0 10px; /* 在表单间添加间隔 */
-            }
-            /* 添加新的CSS类来设置按钮文字颜色 */
-            .green-text {
-                color: green; /* 设置文字颜色为绿色 */
-            }
-            .blue-text {
-                color: blue; /* 设置文字颜色为蓝色 */
-            }
-            .red-text {
-                color: red; /* 设置文字颜色为红色 */
-            }
-            #content-image {
-                width: 100%; /* 设置图片宽度 */
-                max-width: 600px; /* 设置图片最大宽度 */
-                margin-top: 20px; /* 在图片上方添加间隔 */
-            }
-        </style>
+    <style>
+        /* 添加CSS样式以使按钮并排显示并设置背景颜色 */
+        .button-container {
+            display: flex; /* 使用Flexbox布局 */
+            justify-content: left; /* 使按钮左对齐显示 */
+            flex-wrap: wrap; /* 允许内容换行 */
+            margin-bottom: 20px; /* 在按钮容器下方添加间隔 */
+        }
+        .button-container form {
+            margin: 0 10px; /* 在表单间添加间隔 */
+        }
+        /* 添加新的CSS类来设置按钮文字颜色 */
+        .green-text {
+            color: green; /* 设置文字颜色为绿色 */
+        }
+        .blue-text {
+            color: blue; /* 设置文字颜色为蓝色 */
+        }
+        .red-text {
+            color: red; /* 设置文字颜色为红色 */
+        }
+        #content-image {
+            width: 100%; /* 设置图片宽度 */
+            max-width: 600px; /* 设置图片最大宽度 */
+            margin-top: 20px; /* 在图片上方添加间隔 */
+        }
+    </style>
 
-    <!-- Linking the JavaScript file -->
-    <script src="{{ url_for('static', filename='home.js') }}" type="text/javascript"></script>
-    <noscript>Sorry, your browser does not support JavaScript</noscript>
-    </head>
-    <body>
-        <h1>Home / Lab / VoltageDividerRule</h1>
+<!-- Linking the JavaScript file -->
+<script src="{{ url_for('static', filename='home.js') }}" type="text/javascript"></script>
+<noscript>Sorry, your browser does not support JavaScript</noscript>
+</head>
+<body>
+    <h1>Home / Lab / VoltageDividerRule</h1>
 
-        <div class="button-container">
-            <!-- 原有的三个按钮 -->
-            <form action="/main" method="get">
-                <button type="submit" class="text-green">Request Control</button>
-            </form>
-            <form action="/stop" method="get">
-                <button type="submit" class="text-blue">Give Up Control</button>
-            </form>
-            <form action="/repair" method="get">
-                <button type="submit" class="text-red">Quickly Repair</button>
-            </form>
-        </div>
+    <div class="button-container">
+        <!-- 原有的三个按钮 -->
+        <form action="/main" method="get">
+            <button type="submit" class="text-green">Request Control</button>
+        </form>
+        <form action="/stop" method="get">
+            <button type="submit" class="text-blue">Give Up Control</button>
+        </form>
+        <form action="/repair" method="get">
+            <button type="submit" class="text-red">Quickly Repair</button>
+        </form>
+    </div>
 
-        <div class="button-container">
-            <!-- Buttons -->
-            <button onclick="changeContent('3D Model')">3-D Model</button>
-            <button onclick="changeContent('Plant Information')">Plant Information</button>
-            <button onclick="changeContent('Control Algorithm')">Control Algorithm</button>
-            <button onclick="changeContent('Configuration')">Configuration</button>
-            <button onclick="changeContent('Algorithm Design')">Algorithm Design</button>
-            <button onclick="changeContent('Painting Area')">Painting Area</button>
-        </div>
+    <div class="button-container">
+        <!-- Buttons -->
+        <button onclick="changeContent('3D Model')">3-D Model</button>
+        <button onclick="changeContent('Plant Information')">Plant Information</button>
+        <button onclick="changeContent('Control Algorithm')">Control Algorithm</button>
+        <button onclick="changeContent('Configuration')">Configuration</button>
+        <button onclick="changeContent('Algorithm Design')">Algorithm Design</button>
+        <button onclick="changeContent('Painting Area')">Painting Area</button>
+    </div>
 
-        <div id="content">
-            <!-- Initial content -->
-        </div>
-    </body>
-    </html>
+    <div id="content">
+        <!-- Initial content -->
+    </div>
+</body>
+</html>
