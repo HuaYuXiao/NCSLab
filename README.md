@@ -13,6 +13,14 @@
 ![Static Badge](https://img.shields.io/badge/Debian-12-A81D33?logo=debian)
 
 
+## Launch
+
+```bash
+python3 workspace/main.py
+python3 workspace/mjpeg_server.py
+```
+
+
 ## Patent
 
 - [一种基于HTML5的电路虚拟实验系统](reference/patent/一种基于HTML5的电路虚拟实验系统.pdf)：[simu] 用户通过平面和3D绘制模型模块，可以根据需要手动绘制平面电路模型
@@ -22,25 +30,6 @@
 - [一种远程控制的电子电路实验系统](reference/patent/一种远程控制的电子电路实验系统.pdf)：
 - [远程在线共享网络实验室的虚-实组合互动实现方法](reference/patent/远程在线共享网络实验室的虚-实组合互动实现方法.pdf)：[simu + real] 基于真实组网环境的虚拟组网实验平台
 
-
-## Release Note
-
-- v2.1.3: 
-    - self defined `html` & `js`
-- v2.1.2:
-  - `rectangle-module` and `submit`
-- v2.1.1:
-  - support video streaming
-- v2.1.0: 
-  - support continuous channel switch
-  - support check for invalid input
-
-
-## Launch
-
-```bash
-python3 src/online/main.py
-```
 
 ### PWM波控制可变电源
 
@@ -55,6 +44,9 @@ python3 src/online/main.py
 
 
 ## Picamera2
+
+update:2024.6.14
+下面这个方案已废弃
 
 update:2024.5.17
 先运行/src/online/Camera_test/server_camera.py 在localhost:8091/video_feed下开启视频流
@@ -76,6 +68,21 @@ Reference
 注意到，底色和内容颜色都是单一的，因此我们首先通过二值化将两者分离开来。
 
 ![Alt Text](Camera/output.png)
+
+
+## Release Note
+
+- v2.1.4:
+    - fix issue #11 #12 #19
+- v2.1.3: 
+    - self defined `html` & `js`
+- v2.1.2:
+  - `rectangle-module` and `submit`
+- v2.1.1:
+  - support video streaming
+- v2.1.0: 
+  - support continuous channel switch
+  - support check for invalid input
 
 
 ## Contributor
