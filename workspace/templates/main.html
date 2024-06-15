@@ -29,11 +29,12 @@
     </style>
 
     <!-- Linking the JavaScript file -->
-    <script src="{{ url_for('static', filename='main.js') }}" type="text/javascript"></script>
+    <script type="module" src="/static/main.js"></script>
     <noscript>Sorry, your browser does not support JavaScript</noscript>
 </head>
 
 <body>
+    <h1>Home / Lab / VoltageDividerRule</h1>
 
     <form id="inputForm" method="POST" action="{{ url_for('main') }}">
         <div class="rectangle-module">

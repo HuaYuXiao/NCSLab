@@ -24,8 +24,9 @@
 ## Launch
 
 ```bash
-python3 workspace/main.py
-python3 workspace/mjpeg_server.py
+cd ~/NCSLab/workspace
+python3 main.py
+python3 mjpeg_server.py
 ```
 
 
