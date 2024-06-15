@@ -58,11 +58,11 @@ function main() {
 
 	{
 		const mtlLoader = new MTLLoader();
-		mtlLoader.load( 'https://threejs.org/manual/examples/resources/models/windmill_2/windmill-fixed.mtl', ( mtl ) => {
+		mtlLoader.load( 'static/OBJ_PCB.mtl', ( mtl ) => {
 			mtl.preload();
 			const objLoader = new OBJLoader();
 			objLoader.setMaterials( mtl );
-			objLoader.load( 'https://threejs.org/manual/examples/resources/models/windmill_2/windmill.obj', ( root ) => {
+			objLoader.load( 'static/OBJ_PCB.obj', ( root ) => {
 				scene.add( root );
 
 				// compute the box that contains all the stuff
