@@ -2,15 +2,23 @@
 
 ![Static Badge](https://img.shields.io/badge/Flask-3.0.3-000000?logo=flask)
 ![Static Badge](https://img.shields.io/badge/Three.js-_-000000?logo=three.js)
+![Static Badge](https://img.shields.io/badge/Node.js-_-5FA04E?logo=node.js)
 ![Static Badge](https://img.shields.io/badge/OpenCV-4.6.0-5C3EE8?logo=opencv)
 
 ![Static Badge](https://img.shields.io/badge/Python-3.8.10-3776AB?logo=python)
 ![Static Badge](https://img.shields.io/badge/HTML5-_-E34F26?logo=html5)
-![Static Badge](https://img.shields.io/badge/CSS3-_-1572B6?logo=css3)
 ![Static Badge](https://img.shields.io/badge/JavaScript-_-F7DF1E?logo=javascript)
+![Static Badge](https://img.shields.io/badge/CSS3-_-1572B6?logo=css3)
 
 ![Static Badge](https://img.shields.io/badge/Raspberry_Pi-4B-A22846?logo=raspberrypi)
 ![Static Badge](https://img.shields.io/badge/Debian-12-A81D33?logo=debian)
+
+
+## Installation
+
+- Install [`Node.js`](https://nodejs.org/en/download/package-manager)
+
+- Install [`three.js`](https://threejs.org/docs/index.html#manual/en/introduction/Installation) and a build tool [`Vite`](https://threejs.org/docs/index.html#manual/en/introduction/Installation)
 
 
 ## Launch
