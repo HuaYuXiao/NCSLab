@@ -34,6 +34,14 @@
     </style>
 
     <!-- Linking the JavaScript file -->
+    <script type="importmap">
+        {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.165.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.165.0/examples/jsm/"
+        }
+        }
+    </script>
     <script type="module" src="/static/home.js"></script>
     <noscript>Sorry, your browser does not support JavaScript</noscript>
 </head>
@@ -53,21 +61,7 @@
         </form>
     </div>
 
-    <div class="button-container">
-        <!-- Buttons -->
-        <button onclick="changeContent('3D Model')">3-D Model</button>
-        <button onclick="changeContent('Plant Information')">Plant Information</button>
-        <button onclick="changeContent('Control Algorithm')">Control Algorithm</button>
-        <button onclick="changeContent('Configuration')">Configuration</button>
-        <button onclick="changeContent('Algorithm Design')">Algorithm Design</button>
-        <button onclick="changeContent('Painting Area')">Painting Area</button>
-    </div>
-
-    <div id="content">
-        <!-- Initial content -->
-    </div>
-
-    <canvas id="c">
+    <canvas id="c" width="800" height="400">
         <script type="module" src="/static/index.js"></script>
     </canvas>
 </body>
