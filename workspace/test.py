@@ -25,8 +25,8 @@ stream = BytesIO()
 
 
 @app.route('/')
-def home():
-    return render_template('home.html')
+def index():
+    return render_template('index.html')
 
 @app.route('/main', methods=['GET', 'POST'])
 def main():
@@ -42,10 +42,6 @@ def main():
         return redirect(url_for('main'))
 
     return render_template('main.html')
-
-@app.route('/stop')
-def stop():
-    return redirect(url_for('home'))
 
 
 if __name__ == '__main__':
