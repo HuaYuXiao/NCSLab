@@ -87,6 +87,11 @@ Reference
 
 
 ## Contributor
+- Circuit Design: Xizhe Hao, Hongjin Tang
+- Video Promotion：Zixuan zhong， Yuxiao Hua
+- Web Design： Yuxiao Hua
+- Patent Drafting: Yuxiao Hua, Xizhe Hao, Yifeng Zhang
+- Patent Application:Xizhe Hao, Yuxiao Hua
 
 - 电路设计：郝熙哲、汤竑敬
 - 视频推流：钟梓轩、华羽霄
