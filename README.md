@@ -14,7 +14,7 @@
 ![Static Badge](https://img.shields.io/badge/Debian-12-A81D33?logo=debian)
 
 
-![Alt Text](攀登计划/结项证书-pdjh2023c11017-正面.png)
+
 
 ## Installation
 
