@@ -92,9 +92,3 @@ Reference
 - Web Design： Yuxiao Hua
 - Patent Drafting: Yuxiao Hua, Xizhe Hao, Yifeng Zhang
 - Patent Application:Xizhe Hao, Yuxiao Hua
-
-- 电路设计：郝熙哲、汤竑敬
-- 视频推流：钟梓轩、华羽霄
-- 网页设计：华羽霄
-- 专利撰写：华羽霄、郝熙哲、张艺峰
-- 专利申请：郝熙哲、华羽霄
